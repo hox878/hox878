@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">J.Wu's web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container py-4">
+            <div class="row g-4 g-md-5 align-items-start">
+                <div class="col-md-4 text-center">
+                    <img src="image0.jpg" alt="myPhoto" class="profile-photo rounded-circle">
+                    <h2 class="h4 mt-3 mb-1">Jiahong Wu</h2>
+                    <p class="text-body-secondary mb-3">Engineer · Programmer · 中 / EN / 日</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="projects.html" class="btn btn-dark btn-sm">My Projects</a>
+                        <a href="mailto:hoxton0201@gmail.com" class="btn btn-outline-dark btn-sm">Contact</a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1 id="greeting" class="fw-bold"></h1>
+                    <p class="lead mb-4">Welcome to my little corner of the internet. This is where I share what I'm learning, what I'm building, and whatever else catches my interest. Someday, it might even grow into a blog or something like that.</p>
+                    <h2 class="section-title">Now</h2>
+                    <ul class="timeline">
+                        <li>
+                            <span class="timeline-date">2026 – Present</span>
+                            <h3 class="timeline-title">Mechanical Engineer</h3>
+                            <p class="timeline-sub">Yamaha Motor R&amp;D Taiwan (YMRT)</p>
+                        </li>
+                    </ul>
+                    <h2 class="section-title">Education</h2>
+                    <ul class="timeline">
+                        <li>
+                            <span class="timeline-date">2021 – 2024</span>
+                            <h3 class="timeline-title">B.S. in Vehicle Engineering</h3>
+                            <p class="timeline-sub">National Formosa University</p>
+                        </li>
+                        <li>
+                            <span class="timeline-date">2020 – 2021</span>
+                            <h3 class="timeline-title">Electrical Engineering</h3>
+                            <p class="timeline-sub">National Kaohsiung University of Science and Technology</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                let greeting = document.querySelector('#greeting');
+                let hour=new Date().getHours();
+                if (hour >= 5 && hour < 12){
+                    greeting.innerHTML="Good morning!";
+                }
+                else if(hour >= 12 && hour < 17){
+                    greeting.innerHTML="Good afternoon!";
+                }
+                else{
+                    greeting.innerHTML="Good evening!";
+                }
+            </script>
+        </div>
+        <footer class="site-footer mt-auto">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>© <span id="year"></span> Jiahong Wu</span>
+                <a href="mailto:hoxton0201@gmail.com">Contact me</a>
+            </div>
+        </footer>
+        <script>
+            document.querySelector("#year").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>

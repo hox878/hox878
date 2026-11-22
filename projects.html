@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" >J.Wu's web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link  active" aria-current="page" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container py-4">
+            <h1>My Projects</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Autonomous Driving with Donkey Car</h3>
+                    <h6 class="card-subtitle mb-3 text-body-secondary">University Capstone Project</h6>
+                    <p class="card-text">Trained a CNN model to steer a self-driving car based on camera images.</p>
+                    <p class="card-text">The project was planned to run on an NVIDIA Jetson Nano, but after power issues with the hardware, we moved training and testing to the Donkey Car Unity simulator on Windows.</p>
+                    <p class="card-text"><strong>My role:</strong> Set up the training environment, trained the model, experimented with training settings such as the number of epochs, and debugged issues.</p>
+                    <p class="card-text"><strong>Tech:</strong> Donkey Car, CNN, Unity simulator, NVIDIA Jetson Nano (early stage)</p>
+                    <span class="badge text-bg-secondary">CNN</span>
+                    <span class="badge text-bg-secondary">Donkey Car</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">This website</h3>
+                    <h6 class="card-subtitle mb-3 text-body-secondary">Personal Project / CS50x problem set</h6>
+                    <p class="card-text">A responsive website built from scratch to introduce myself and share what I learn and build.</p>
+                    <p class="card-text"><strong>Features:</strong> Time-based greeting, mobile-friendly layout</p>
+                    <span class="badge text-bg-secondary">HTML</span>
+                    <span class="badge text-bg-secondary">JavaScript</span>
+                    <span class="badge text-bg-secondary">CSS</span>
+                    <span class="badge text-bg-secondary">Bootstrap</span>
+                </div>
+            </div>
+            <div class="card text-body-secondary bg-body-tertiary">
+                <div class="card-body">
+                    <h3 class="card-title">CS50x Final Project</h3>
+                    <h6 class="card-subtitle mb-3">Still working on it</h6>
+                    <p class="card-text">Currently in planning.</p>
+                </div>
+            </div>
+            <!-- next -->
+        </div>
+        <footer class="site-footer mt-auto">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>© <span id="year"></span> Jiahong Wu</span>
+                <a href="mailto:hoxton0201@gmail.com">Contact me</a>
+            </div>
+        </footer>
+        <script>
+            document.querySelector("#year").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>

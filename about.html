@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">J.Wu's web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container py-4">
+            <h1>Who am I?</h1>
+            <p>Hello! My name is Jiahong Wu . I graduated from the Department of Vehicle Engineering at National Formosa University and currently work as a Mechanical Engineer at Yamaha Motor R&D Taiwan (YMRT).</p>
+            <p>Outside of work, you'll probably find me gaming, reading manga, traveling, or taking photos along the way.</p>
+            <h2>Why does this website exist?</h2>
+            <p>My interest in programming started in my first year of university, when I studied Electrical Engineering at National Kaohsiung University of Science and Technology. Programming quickly became my favorite subject, and even after I moved to Vehicle Engineering, I kept learning programming in my spare time.</p>
+            <p>Now, after work, I am teaching myself computer science through Harvard's CS50x, where I have learned C, Python, SQL, and some web development. This website is where I share what I learn and build.</p>
+        </div>
+        <footer class="site-footer mt-auto">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>© <span id="year"></span> Jiahong Wu</span>
+                <a href="mailto:hoxton0201@gmail.com">Contact me</a>
+            </div>
+        </footer>
+        <script>
+        document.querySelector("#year").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>
